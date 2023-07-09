@@ -1,0 +1,17 @@
+{%extends "accounts/base.html"%}
+
+{%block content%}
+    <p>Topics</p>
+
+    <ul>
+        
+        {%for topic in topics%}
+        <li>
+            <a href="{%url 'accounts:topic' topic.id%}">{{ topic }}</a>
+        </li>
+        {%empty%}
+        <li>Nothing to display yet.</li>
+        {%endfor%}
+    </ul>
+
+{%endblock content%}
